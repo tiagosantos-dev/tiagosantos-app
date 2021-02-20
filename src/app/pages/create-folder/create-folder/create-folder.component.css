@@ -1,0 +1,39 @@
+.mat-list-icon {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.example-action-buttons {
+    padding-bottom: 20px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.example-headers-align .mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.createFolder {
+    height: 100vh;
+}
+
+.link-folder {
+    text-decoration: none;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}

@@ -1,0 +1,139 @@
+<div class="m-4">
+    <h2 class="title">Cadastrar Despesa</h2>
+    <p>Veja as ultimas noticias</p>
+    <mat-card>
+        <mat-card-title></mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+        <mat-card-content>
+            <form class="">
+                <div class="row">
+                    <div class="col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Nome da pasta</mat-label>
+                            <input type="text" placeholder="Selecione" aria-label="Number" matInput [matAutocomplete]="auto">
+                            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                <mat-option>
+                                    casa
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Nome da despesa</mat-label>
+                            <input matInput placeholder="Ex. Pizza">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Categoria</mat-label>
+                            <input matInput placeholder="">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Valor</mat-label>
+                            <input matInput placeholder="R$">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Quantidade de parcela</mat-label>
+                            <input matInput placeholder="Ex. 1">
+                        </mat-form-field>
+                    </div>
+
+                </div>
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>SALVAR NA PASTA</button>
+            <button mat-button>ENVIAR PARA AMIGO</button>
+        </mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+    </mat-card>
+</div>
+<div class="m-4">
+    <h2 class="title">Analise suas contas</h2>
+    <p>Veja as ultimas noticias</p>
+    <mat-card>
+        <mat-card-title></mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+        <mat-card-content>
+
+            <div class="row">
+                <div class="col-md-6 ">
+                    <p-chart type="bar" [data]="data"></p-chart>
+                </div>
+                <div class="col-md-6">
+                    <p-chart type="line" [data]="data1"></p-chart>
+                </div>
+            </div>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <!-- <button mat-button>LER FATURA</button> -->
+        </mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+    </mat-card>
+</div>
+<div class="m-4 mb-5">
+    <h2 class="title">Ultimas compras</h2>
+    <p>Veja as ultimas noticias</p>
+    <div class="">
+        <div class="row scroll-container">
+            <div class="col-md-3">
+                <mat-card class="card-scroll ">
+                    <mat-card-title>Super portugal</mat-card-title>
+                    <mat-card-subtitle>Dia 22 de janeiro de 2021</mat-card-subtitle>
+                    <mat-card-content>
+                        <h2>R$ 300,00</h2>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>VER MAIS</button>
+                        <button mat-button>COMPARTILHAR COM AMIGO</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="card-scroll ">
+                    <mat-card-title>Super portugal</mat-card-title>
+                    <mat-card-subtitle>Dia 22 de janeiro de 2021</mat-card-subtitle>
+                    <mat-card-content>
+                        <h2>R$ 300,00</h2>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>VER MAIS</button>
+                        <button mat-button>COMPARTILHAR COM AMIGO</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="card-scroll ">
+                    <mat-card-title>Super portugal</mat-card-title>
+                    <mat-card-subtitle>Dia 22 de janeiro de 2021</mat-card-subtitle>
+                    <mat-card-content>
+                        <h2>R$ 300,00</h2>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>VER MAIS</button>
+                        <button mat-button>COMPARTILHAR COM AMIGO</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="card-scroll ">
+                    <mat-card-title>Super portugal</mat-card-title>
+                    <mat-card-subtitle>Dia 22 de janeiro de 2021</mat-card-subtitle>
+                    <mat-card-content>
+                        <h2>R$ 300,00</h2>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>VER MAIS</button>
+                        <button mat-button>COMPARTILHAR COM AMIGO</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

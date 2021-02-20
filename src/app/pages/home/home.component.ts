@@ -1,18 +1,19 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
-import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
-import { ErrorStateMatcher } from '@angular/material/core';
-import {MediaMatcher} from '@angular/cdk/layout'; 
+import { MediaMatcher } from '@angular/cdk/layout';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
+export class HomeComponent implements OnInit {
+  
 
-
-
-export class AppComponent {
+  ngOnInit(): void {
+  }
   title = 'tiagosantosApp';
   mobileQuery: MediaQueryList;
 

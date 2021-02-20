@@ -1,0 +1,214 @@
+<!-- <div class="container">
+    <h1>Olá, Fulano.</h1>
+    <div>
+        <div class="row">
+            <div class="col-md-3">
+                <mat-card>
+                    <mat-card-header>
+                        <div mat-card-avatar>
+                            <mat-icon>create_new_folder</mat-icon>
+                        </div>
+                        <mat-card-title>Simples</mat-card-title>
+                        <mat-card-subtitle>Cuide da suas finanças</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>CRIAR UM PACOTE</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card>
+                    <mat-card-header>
+                        <div mat-card-avatar>
+                            <mat-icon>phone_android</mat-icon>
+                        </div>
+                        <mat-card-title>Fácil</mat-card-title>
+                        <mat-card-subtitle> palma da sua mão</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>CADASTRAR UMA COMPRA</button>
+
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card>
+                    <mat-card-header>
+                        <div mat-card-avatar>
+                            <mat-icon>qr_code</mat-icon>
+                        </div>
+                        <mat-card-title>QR code</mat-card-title>
+                        <mat-card-subtitle>Leia em QR code.</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>LER FATURA</button>
+
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card>
+                    <mat-card-header>
+                        <div mat-card-avatar>
+                            <mat-icon>credit_card</mat-icon>
+                        </div>
+                        <mat-card-title>Despesas </mat-card-title>
+                        <mat-card-subtitle>do seu cartão.</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button>ADICIONAR UMA DESPESA</button>
+
+                    </mat-card-actions>
+                </mat-card>
+
+            </div>
+
+        </div>
+    </div>
+</div> -->
+
+
+<p class="">
+    <mat-toolbar class="mat-elevation-z5">
+        <button mat-icon-button (click)="snav.toggle()" class=" example-icon " aria-label="Example icon-button with menu icon ">
+            <mat-icon class=" ">menu</mat-icon>
+        </button>
+        <span>tiagosantos.dev</span>
+        <span class="example-spacer "></span>
+
+        <a mat-icon-button class="example-icon " aria-label="Example icon-button with share icon ">
+            <p-avatar label="TS" pBadge value="4" shape="circle"></p-avatar>
+        </a>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu ">
+            <mat-icon>grain</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>settings</mat-icon>
+                <span>Ajustes</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>Desabilitar alertas</span>
+            </button>
+            <button mat-menu-item disabled>
+                <mat-icon>logout</mat-icon>
+                <span>Sair</span>
+            </button>
+        </mat-menu>
+
+        <mat-menu #person="matMenu">
+            <button mat-menu-item>
+                <mat-icon>person</mat-icon>
+                <span>Perfil</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>people</mat-icon>
+                <span>Todos os amigo</span>
+            </button>
+
+        </mat-menu>
+
+    </mat-toolbar>
+</p>
+
+
+
+
+<mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list>
+            <ul class="" style="list-style: none; padding: 0px;">
+                <li>
+                    <button mat-menu-item routerLink="/home">
+                        <mat-icon>home</mat-icon>
+                        <span>Inicio</span>
+                    </button>
+                </li>
+                <li>
+                    <button mat-menu-item>
+                        <mat-icon>request_quote</mat-icon>
+                        <span>Despesas</span>
+                    </button>
+                </li>
+                <li>
+                    <button mat-menu-item>
+                        <mat-icon>request_page</mat-icon>
+                        <span>Despesa compartilhada</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button mat-menu-item routerLink="/create-folder">
+                        <mat-icon>folder_open</mat-icon>
+                        <span>Pastas</span>
+                    </button>
+                </li>
+                <li>
+                    <button mat-menu-item>
+                        <mat-icon>folder_shared</mat-icon>
+                        <span>Pasta compartilhadas</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button mat-menu-item>
+                        <mat-icon>playlist_add_check</mat-icon>
+                        <span>Rotina</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button mat-menu-item>
+                        <mat-icon>person_add_alt</mat-icon>
+                        <span>Adicionar amigo</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button mat-menu-item>
+                        <mat-icon>settings</mat-icon>
+                        <span>Configuraçaõ</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button mat-menu-item>
+                        <mat-icon>logout</mat-icon>
+                        <span>Sair</span>
+                    </button>
+                </li>
+
+                <li></li>
+
+            </ul>
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,95 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-form-field {
+    width: 100%;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.department-cto {
+    background-color: #e9286f;
+    color: #ffffff;
+}
+
+.department-coo {
+    background-color: #a534b6;
+    color: #ffffff;
+}
+
+.department-cfo {
+    background-color: #7247bc;
+    color: #ffffff;
+}
+
+.node-content img {
+    border-radius: 50%;
+}
+
+.node-content {
+    text-align: center;
+    border: 1px solid #495ebb;
+}
+
+.node-header {
+    background-color: #495ebb;
+    color: #ffffff;
+}
+
+.p-person {
+    padding: 0;
+    border: 0 none;
+}
+
+.node-header,
+.node-content {
+    padding: .5em .7rem;
+}
+
+.scroll-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.card-scroll {
+    margin: 10px;
+    flex: 0 0 auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 500px;
+}
+
+@media(max-width:768px) {
+    .scroll-container {
+        flex-wrap: nowrap;
+    }
+    .card-scroll {
+        width: 100% !important;
+        margin: 0px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+}

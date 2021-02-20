@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f9fa !important;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* 
+.p-breadcrumb {
+    height: 20px;
+}
+
+.p-menuitem-text {
+    font-size: 10px;
+} */
+
+.p-breadcrumb {
+    padding: 3.rem !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.p-component-overlay {
+    height: calc(100% - 20rem) !important;
+}
+
+.p-sidebar-bottom {
+    height: 20rem !important;
+}

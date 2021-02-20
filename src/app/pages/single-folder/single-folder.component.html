@@ -1,0 +1,89 @@
+<div class="container ">
+
+    <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+    <div class="row  my-5 ">
+        <div class="col-md-6">
+            <mat-accordion class="example-headers-align">
+                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                    <mat-expansion-panel-header>
+                        <!-- <mat-panel-title>
+                            Criar pasta
+                        </mat-panel-title> -->
+                        <mat-panel-description>
+                            Clique para criar uma pasta
+                            <mat-icon>folder</mat-icon>
+                        </mat-panel-description>
+
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field>
+                        <mat-label>Nome da pasta</mat-label>
+                        <input matInput>
+
+                    </mat-form-field>
+                    <mat-action-row>
+                        <button mat-button color="primary" (click)="nextStep()">Criar</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+                <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Cadastrar compra
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Clique para adicionar uma despesa
+                            <mat-icon>feed</mat-icon>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+
+                    <mat-form-field>
+                        <mat-label>Nome</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Valor</mat-label>
+                        <input matInput type="number" min="1">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Parcela</mat-label>
+                        <input matInput type="number" min="1">
+                    </mat-form-field>
+                    <mat-action-row>
+                        <button mat-button color="primary" (click)="save()">Adicionar</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+        <div class="col-md-6">
+
+            <p-chart type="pie" [data]="data" [options]="options"></p-chart>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <mat-list>
+        <div mat-subheader>Pastas adicionadas</div>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let folder of folders">
+                <a class="link-folder" routerLink="/single-folder">
+                    <mat-list-item>
+                        <mat-icon mat-list-icon>folder</mat-icon>
+                        <div mat-line>{{folder.name}}</div>
+                        <div mat-line> {{folder.updated | date}} </div>
+                    </mat-list-item>
+                </a>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div mat-subheader>Compras adicionadas</div>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let note of notes">
+                <mat-list-item>
+                    <mat-icon mat-list-icon>note</mat-icon>
+                    <div mat-line>{{note.name}}</div>
+                    <div mat-line> {{note.updated | date}} </div>
+                </mat-list-item>
+            </div>
+        </div>
+    </mat-list>
+</div>
