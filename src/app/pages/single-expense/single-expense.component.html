@@ -1,10 +1,11 @@
-<div class="container">
-    <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
-    <div class=" my-5">
+<div class="container h-100" style="height:83vh !important;">
+    <div class=" my-5 h-100">
 
-        <mat-card class="example-card">
+        <mat-card class="example-card " style="color: #fff; background: linear-gradient(to right, #348AC7, #7474BF) !important;">
             <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
+                <div mat-card-avatar class="example-header-image">
+                    <mat-icon>request_quote</mat-icon>
+                </div>
                 <mat-card-title>Super Portugal</mat-card-title>
                 <mat-card-subtitle>21 de Janeiro 2021</mat-card-subtitle>
             </mat-card-header>
@@ -13,16 +14,19 @@
                     The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
                 </p>
                 <h2 class="font-weight-bold">R$ 300,00</h2>
-                <p-rating [(ngModel)]="val"></p-rating>
 
-            </mat-card-content>
-            <mat-card-actions>
+                <p-rating [(ngModel)]="val"></p-rating>
+                <br>
                 <mat-chip-list aria-label="Fish selection">
                     <mat-chip color="accent" class="mr-2" selected>R$ 300,00</mat-chip>
                     <mat-chip color="primary" class="mr-2" selected>3X</mat-chip>
                     <mat-chip color="accent" class="mr-2" selected>Lazer</mat-chip>
                     <mat-chip color="primary" selected>Cartão Digio</mat-chip>
                 </mat-chip-list>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>EDITAR </button>
+                <button mat-button>COMPARTILHAR </button>
             </mat-card-actions>
         </mat-card>
 

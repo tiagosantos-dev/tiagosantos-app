@@ -11,9 +11,9 @@ const routes: Routes = [
   {
     path: "", component: HomeComponent , children:[
       { path: "", component: InitialComponent },
-      { path: "create-folder", component: CreateFolderComponent },
-      { path: "single-folder", component: SingleFolderComponent },
-      { path: "single-expense", component: SingleExpenseComponent },
+      { path: "folder", component: CreateFolderComponent },
+      { path: "single-folder/:id", component: SingleFolderComponent },
+      { path: "single-expense/:id", component: SingleExpenseComponent },
 
     ]
   },

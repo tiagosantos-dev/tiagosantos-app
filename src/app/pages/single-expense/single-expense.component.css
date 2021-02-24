@@ -1,3 +1,15 @@
 table {
     width: 100%;
 }
+
+.example-header-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #ff4081 !important;
+}
+
+.p-rating .p-rating-icon .pi-star {
+    color: yellow !important;
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { KnobModule } from 'primeng/knob';
+import Folder from 'src/app/models/Folder.model';
+import { FolderService } from 'src/app/services/folder-service/folder.service';
 @Component({
   selector: 'app-single-folder',
   templateUrl: './single-folder.component.html',
@@ -8,81 +10,23 @@ import { KnobModule } from 'primeng/knob';
 })
 export class SingleFolderComponent implements OnInit {
 
-  public items: MenuItem[] = [];
-  public home: MenuItem = {};
-  data: any;
-  options: any;
-  constructor() { }
 
+  constructor(private folderService :FolderService) { }
+  display = false;
+  folderName: any;
   ngOnInit(): void {
-    this.items = [
-      { label: 'Computer' },
-      { label: 'Notebook' },
-      { label: 'Accessories' },
-      { label: 'Backpacks' },
-      { label: 'Item' }
-    ];
-
-    this.home = { icon: 'pi pi-home', routerLink: '/' };
-    this.data = {
-      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-      datasets: [
-        {
-          label: 'First Dataset',
-          data: [65, 59, 80, 81, 56, 55, 40],
-          backgroundColor: [
-            "#FF6384",
-            "#36A2EB",
-            "#FFCE56",
-            "#9b59b6",
-            "#485460",
-            "#05c46b",
-            "#2f3640",
-            "#d35400",
-            "#D99066",
-            "#1F1F1F",
-            "#FFFFFF",
-            "#675646"
-          ],
-        }
-
-      ]
-    }
-    this.options = {
-      title: {
-        display: true,
-        text: 'Total de gasto ao mês',
-        fontSize: 16
-      },
-      legend: {
-        position: 'bottom'
-      }
-    };
-
+    this.getFolder();
+ 
   }
-
-  folders = [
-    {
-      name: 'Photos',
-      updated: new Date('1/1/16'),
-    },
-    {
-      name: 'Recipes',
-      updated: new Date('1/17/16'),
-    },
-    {
-      name: 'Work',
-      updated: new Date('1/28/16'),
-    }
-  ];
+  folders : Folder[] = [];
   notes = [
     {
       name: 'Vacation Itinerary',
-      updated: new Date('2/20/16'),
+      date_register: new Date('2/20/16'),
     },
     {
       name: 'Kitchen Remodel',
-      updated: new Date('1/18/16'),
+      date_register: new Date('1/18/16'),
     }
   ];
   step = 0;
@@ -98,7 +42,20 @@ export class SingleFolderComponent implements OnInit {
   prevStep() {
     this.step--;
   }
-  save() {
 
+  save(){
+    console.log(this.folderName)
+    this.folderService.save(new Folder(this.folderName)).subscribe((response :any)=> console.log(response))
+      this.getFolder();
+    this.nextStep();
   }
+
+  getFolder(){
+    this.folderService.getFoldersMain().subscribe((response:any) => {
+      this.folders = response 
+      console.log(response)
+
+    })
+  }
+  
 }

@@ -34,3 +34,23 @@ body {
 .p-sidebar-bottom {
     height: 20rem !important;
 }
+
+.button-plus {
+    position: fixed !important;
+    bottom: 15px !important;
+    right: 15px !important;
+    z-index: 100000000 !important;
+    transition: all .3s ease;
+}
+
+.mat-tab-labels {
+    background: linear-gradient(to right, #348AC7, #7474BF) !important;
+}
+
+.mat-tab-labels div {
+    color: white !important;
+}
+
+.pi-star {
+    color: #fff !important;
+}

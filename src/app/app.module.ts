@@ -61,15 +61,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MenubarModule} from 'primeng/menubar';
 import {ColorPickerModule} from 'primeng/colorpicker';
 import {ChartModule} from 'primeng/chart';
-import { SingleExpenseComponent } from './pages/single-expense/single-expense.component';
+
 import {RatingModule} from 'primeng/rating';
 import { InternalModule } from './pages/internal/internal.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
+   
   ],
   imports: [
     BrowserModule,

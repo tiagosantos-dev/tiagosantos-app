@@ -37,3 +37,21 @@
 .example-full-width {
     width: 100%;
 }
+
+.containerr {
+    height: 90vh;
+}
+
+.example-header-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(to right, #348AC7, #7474BF) !important;
+}
+
+@media(max-width: 768px) {
+    .example-card {
+        margin-top: 10px;
+    }
+}
